@@ -1,4 +1,4 @@
-## common
+## swa-common
 
 [![Travis CI](http://img.shields.io/travis/sacres/ansible/roles/common.svg?style=flat)](http://travis-ci.org/sacres/ansible/roles/common)  [![Platforms](http://img.shields.io/badge/platforms-el-lightgrey.svg?style=flat)](#)
 
