@@ -1,6 +1,6 @@
-## swa-common
+## common
 
-[![Travis CI](http://img.shields.io/travis/sacres/ansible/roles/common.svg?style=flat)](http://travis-ci.org/sacres/ansible/roles/common)  [![Platforms](http://img.shields.io/badge/platforms-el-lightgrey.svg?style=flat)](#)
+  [![Platforms](http://img.shields.io/badge/platforms-EL-blue.svg?style=flat)](#)
 
 Common role that runs on most if not all boxen.
 
@@ -17,6 +17,7 @@ List of default variables available in the inventory:
 
     ansible_user: []
 
+
 ### Detailed usage guide
 
 - 'ansible' with this role and most others in this repo refers to the 'mgmt' box/group as well as the designated user for ansible mgmt, define the user in ./defaults/main.yml: ansible_user: ..
@@ -32,7 +33,7 @@ List of default variables available in the inventory:
 ### Authors and license
 
 `common` role was written by:
-- [Steven Acres](https://github.com/sacres/ansible) | [e-mail](mailto:steven@swatteksystems.com) | [Twitter](https://twitter.com/swamobil)
+- [Steven Acres](https://github.com/sacres) | [e-mail](mailto:steven@swatteksystems.com) | [Twitter](https://twitter.com/swamobil)
 License: [BSDv3](https://tldrlegal.com/license/bsd-3-clause-license-(revised))
 
 ***
