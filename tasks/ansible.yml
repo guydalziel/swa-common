@@ -21,15 +21,9 @@
 # The following and associated tasks also 'enables' redis as fact engine, which requires ansible >= 1.8.2
   - name: Install ansible and mgmt pkgs on ansible box
     yum: name={{ item }} state=present
-    with_items:
-      - ansible
-      - fping
-      - python-pip
-      - nmap
-      - git
-      - facter
-      - redis
-      - sshpass
+    with_flattened:
+      - common_pkgs
+      - ansible_pkgs
 
   - name: start redis on ansible box
     service: name=redis state=started enabled=yes

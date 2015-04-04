@@ -14,21 +14,11 @@
 
   - name: Ensure buggy yum fastest-mirror plugin is *disabled*
     lineinfile: dest=/etc/yum/pluginconf.d/fastestmirror.conf regexp=enabled= line=enabled=0
-# amend below to include 'common' pkgs for all boxen
+
   - name: Install git, lsof, nc, bind-utils, iptables-services
     yum: name={{ item }} state=present
-    with_items:
-      - "nc"
-      - "lsof"
-      - "bind-utils"
-      - "git"
-      - "yum-plugin-changelog"
-      - "iptables-services"
-      - "audispd-plugins"
-      - "htop"
-      - "iptraf-ng"
-      - "facter"
-      - "vim-enhanced"
+    with_flattened:
+      - common_pkgs
 
   - name: Install sudoers
     template: src=sudoers.j2 dest=/etc/sudoers owner=root group=root mode=440

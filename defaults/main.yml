@@ -4,3 +4,11 @@
 inv_hosts: 'inventory/hosts'
 
 ansible_user: []
+
+# amend pkgs as formatted below for common.yml yum task to suit.
+common_pkgs:
+  - ['nc', 'lsof', 'bind-utils', 'yum-plugin-changelog', 'iptables-services', 'audispd-plugins', 'facter', 'vim-enhanced']
+
+# amend pkgs as formatted below for ansible.yml yum task if needed.
+ansible_pkgs:
+  - ['ansible', 'fping', 'python-pip', 'nmap', 'git', 'redis', 'sshpass']
